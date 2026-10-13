@@ -5,119 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigesty's Dev Journey </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <div><a href="#">Nigesty's Dev Journey</a></div>
-        <nav>
+    <header class="desktop-nav">
+        <div><a href="#hero" class="logo">Nigesty's Dev Journey</a></div>
+        <nav class="desktop-menu">
             <ul>
-                <li><a href="#">Learning logs</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#logs">Learning logs</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section id="hero" class="hero container">
             <div>
-                <p> Programming journey &middot; 2026</p>
-                <h1>Learning, building, figuring it out</h1>
-                <p>Notes on what I've built, what broke, what I learned, and the practices that have helped me become a
-                    better developer. </p>
-                <a href="#">Read the latest log</a>
-                <a href="https://github.com/Nigestyh" target="_blank" rel="noreferrer">Github ↗</a>
+                <p class="label"> Programming journey &middot; 2026</p>
+                <h1>Learning, building,<br> <span>figuring it out.</span></h1>
+                <p class="hero-text">Notes on what I've built, what broke, what I learned, and the practices that have
+                    helped me become a better developer. </p>
+                <div class="hero-action">
+                    <a href="#logs" class="btn primary">Read the latest log</a>
+                    <a href="https://github.com/Nigestyh" class="btn secondary" target="_blank" rel="noreferrer">Github
+                        ↗</a>
+                </div>
             </div>
-            <div>
-                <div>
+            <div class="terminal">
+                <div class="terminal-top">
                     <div></div>
                     <div></div>
                     <div></div>
                     <span>~/learning-log</span>
                 </div>
                 <pre>
-                    <code>
-                        $ git log --oneline
+<code>
+<span class="muted">$</span> git log --oneline
 
-                        8c31a9 Add API error handling
-                        4fc218 Build weather dashboard
-                        7e8c11 Learn async/await
-                        a92c03 First Javascript project
+<span class="commit-hash">8c31a9</span> Add API error handling
+<span class="commit-hash">4fc218</span> Build weather dashboard
+<span class="commit-hash">7e8c11</span> Learn async/await
+<span class="commit-hash">a92c03</span> First Javascript project
 
-                        $ cat progress.txt
-                        Progress > Perfection
+<span class="muted">$</span> cat progress.txt
+<span class="success">Progress > Perfection</span>
 
-                    </code>
+</code>
                 </pre>
             </div>
         </section>
-        <section>
+        <section id="logs" class="section container">
             <div>
-                <p>Learning log</p>
-                <h2>Lessons along the way</h2>
+                <p class="label">Learning log</p>
+                <h2 class="home">Lessons along the way</h2>
             </div>
-            <article>
-                <p> Oct 13, 2026 &middot; Javascript &middot; 3 min read</p>
-                <h3>What I Learned Building an Etch-a-Sketch</h3>
+            <article class="featured-card">
+                <p class="post-date"><span>Oct 13, 2026</span> <span>&middot;</span><span> Javascript
+                    </span><span>&middot;</span><span> 3 min read</span></p>
+                <h3 class="article-title home">What I Learned Building an Etch-a-Sketch</h3>
                 <p>A digital sketchpad where users can draw on the grid, paint using different colours (including
                     rainbow colours),
                     erase, and reset the grid. My goal was to put DOM manipulation and
                     event handling concepts into practice.
                 </p>
-                <a href="#"> Read the full breakdown → </a>
+                <a href="#" class="text-link"> Read the full breakdown → </a>
             </article>
-            <div>
-                <article>
-                    <span>CSS</span>
-                    <h4>More lessons along the way</h4>
+            <div class="blog-list">
+                <article class="card">
+                    <span class="tag">CSS</span>
+                    <h4 class="blog-header">More lessons along the way</h4>
                     <p>New lessons, practices and project breakdowns will appear here.</p>
-                    <p>Coming soon</p>
+                    <p class="date post-date">Coming soon</p>
                 </article>
 
-                <article>
-                    <span>JavaScript</span>
-                    <h4>More lessons along the way</h4>
+                <article class="card">
+                    <span class="tag">JavaScript</span>
+                    <h4 class="blog-header">More lessons along the way</h4>
                     <p>New lessons, practices and project breakdowns will appear here.</p>
-                    <p>Coming soon</p>
+                    <p class="date post-date">Coming soon</p>
                 </article>
             </div>
         </section>
-        <section>
-            <p>Projects</p>
-            <h2>Things I've built</h2>
-            <div>
-                <article>
-                    <div>01</div>
+        <section id="projects" class="project-section container">
+            <p class="label">Projects</p>
+            <h2 class="home">Things I've built</h2>
+            <div class="project-list">
+                <article class="card">
+                    <div class="project-number">01</div>
                     <h4>Project title</h4>
                     <p>Short project description goes here.</p>
-                    <div><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                    <span>Read what I learned →</span>
+                    <div class="stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                            class="tag">JavaScript</span></div>
+                    <span class="text-link placeholder">Read project notes→</span>
                 </article>
-                <article>
-                    <div>02</div>
+                <article class="card">
+                    <div class="project-number">02</div>
                     <h4>Project title</h4>
                     <p>Short project description goes here</p>
-                    <div><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                    <span>See it live →</span>
+                    <div class="stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                            class="tag">JavaScript</span></div>
+                    <span class="text-link placeholder">See it live →</span>
                 </article>
 
-                <article>
-                    <div>03</div>
+                <article class="card">
+                    <div class="project-number">03</div>
                     <h4>Project title</h4>
                     <p>Short project description goes here</p>
-                    <div><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                    <span>View on GitHub →</span>
+                    <div class="stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                            class="tag">JavaScript</span></div>
+                    <span class="text-link placeholder">View on GitHub →</span>
                 </article>
             </div>
         </section>
-        <section>
-            <p>A bit about me</p>
-            <h2>Who I am, why this page exists, and more.</h2>
-            <a href="#">More about me → </a>
+        <section id="about" class="section container">
+            <p class="label about-me">A bit about me</p>
+            <h2 class="h2 home">Who I am, why this page exists,<br> and more.</h2>
+            <a href="#" class="btn secondary">More about me → </a>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 Nigesty</p>
+    <footer class="home-footer container">
+        <p>&copy; 2026 Nigesty Hagos</p>
     </footer>
 </body>
 
