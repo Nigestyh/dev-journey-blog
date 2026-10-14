@@ -5,23 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Nigesty's Dev Journey</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header>
-        <div><a href="#">Nigesty's Dev Journey</a></div>
-        <nav>
+    <header class="desktop-nav">
+        <div><a href="../../index.html#hero" class="logo">Nigesty's Dev Journey</a></div>
+        <nav class="desktop-menu">
             <ul>
-                <li><a href="#">Learning logs</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="../../index.html#logs">Learning logs</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#about">About</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>About</h1>
-        <section>
-            <div>
+    <main class="container about-container">
+        <h1 class="page-title">About</h1>
+        <section class="my-story">
+            <div class="story-content">
                 <p>
                     Halfway through 2026, I looked back at my 2025 calendar, and one word kept appearing:
                     <strong>Learn</strong>.
@@ -42,13 +44,14 @@
 
                 <p>So, I decided to stop passively learning and start building. I wanted to create something real and
                     tangible that I could look back on and see how far I've come.</p>
-                <figure><img src="./imgs/desk.jpg" alt="My desk setup where I build and learn" width="3024"
-                        height="4032" />
-                    <figcaption>Where most of the learning and building happens</figcaption>
-                </figure>
             </div>
+            <figure class="story-image-wrapper"><img src="./imgs/desk.jpg" alt="My desk setup where I build and learn"
+                    width="3024" height="4032" class="about-img" />
+                <figcaption class="image-caption">Where most of the learning and building happens</figcaption>
+            </figure>
+
         </section>
-        <section>
+        <section class="about-content">
             <h2>Why I Created This Page</h2>
 
             <p>
@@ -77,25 +80,28 @@
                 reading, hanging out with family, and asking myself when I'll finally get back to playing the piano
                 again-I'm working on it! :)
             </p>
-            <figure><img src="./imgs/on-hike.jpg" alt="Me with a scenic background view from a mountain hiking trail"
-                    width="1151" height="597" /></figure>
+            <figure class="hike-image-wrapper"><img src="./imgs/on-hike.jpg"
+                    alt="Me with a scenic background view from a mountain hiking trail" width="1151" height="597"
+                    class="about-img" />
+            </figure>
 
             <p>
                 With that said, if you're also learning to code, building projects, or figuring out your own path
                 into software development, I'd love to hear from you!
             </p>
-            <div>
+            <div class="social-link">
                 <p>
-                    You can find me on <a href="https://x.com/__JustNigesty__" target="_blank" rel="noreferrer">X</a>,
-                    <a href="https://github.com/Nigestyh" target="_blank" rel="noreferrer">GitHub</a>,
+                    You can find me on <a href="https://x.com/__JustNigesty__" class="link" target="_blank"
+                        rel="noreferrer">X</a>,
+                    <a href="https://github.com/Nigestyh" class="link" target="_blank" rel="noreferrer">GitHub</a>,
                     and
-                    <a href="https://www.linkedin.com/in/nigesty-hagos-1b3340396/" target="_blank"
+                    <a href="https://www.linkedin.com/in/nigesty-hagos-1b3340396/" class="link" target="_blank"
                         rel="noreferrer">LinkedIn</a>.
                 </p>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class=" home-footer container">
         <p>&copy;2026 Nigesty Hagos</p>
     </footer>
 </body>
