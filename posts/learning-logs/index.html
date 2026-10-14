@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch | Application</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css">
+
 </head>
 
 <body>
-    <header>
-        <div><a href="../../index.html#hero">Nigesty's Dev Journey</a> </div>
+    <header class="desktop-nav">
+        <div><a href="../../index.html#hero" class="logo">Nigesty's Dev Journey</a> </div>
         <nav>
             <ul>
                 <li><a href="../../index.html#logs">Learning logs</a></li>
@@ -18,51 +22,55 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <article>
-            <header>
-                <p>Full learning log</p>
-                <h2>What I Learned Building an Etch-a-Sketch</h2>
-                <div>
-                    <p>Aug 24, 2026 · JavaScript · DOM Manipulation & Events</p>
-                    <span>
-                        |
-                        <a href="https://github.com/Nigestyh/etch-a-sketch" target=_blank rel="noreferrer">View code</a>
-                        ·
-                        <a href="https://nigestyh.github.io/etch-a-sketch/" target=_blank rel="noreferrer">Live
-                            demo</a></span>
-                </div>
-            </header>
-            <p>I created this project as part of The Odin Project's curriculum to put what I
-                had learned about event
-                handling and DOM manipulation into practice. I wanted to see how these concepts worked together
-                when building something interactive.
-            </p>
-            <h3>
-                Challenges I Had
+    <main id="log-content" class="container">
+        <div class="article-layout">
+            <article>
+                <header>
+                    <p class="article-label">Full learning log</p>
+                    <h2>What I Learned Building an Etch-a-Sketch</h2>
+                    <div class="post-date meta-container">
+                        <p class="date">Oct 14, 2026 · JavaScript · DOM Manipulation & Events</p>
+                        <span>
+                            |
+                            <a href="https://github.com/Nigestyh/etch-a-sketch" class="interactive-link" target=_blank
+                                rel="noreferrer">View
+                                code</a>
+                            ·
+                            <a href="https://nigestyh.github.io/etch-a-sketch/" class="interactive-link" target=_blank
+                                rel="noreferrer">Live
+                                demo</a></span>
+                    </div>
+                </header>
+                <p class="overview">I created this project as part of The Odin Project's curriculum to put what I
+                    had learned about event
+                    handling and DOM manipulation into practice. I wanted to see how these concepts worked together
+                    when building something interactive.
+                </p>
+                <h3>
+                    Challenges I Had
 
-            </h3>
-            <ul>
-                <li>When the cursor reached the end of the grid, the grid container and the web page would turn red.
-                </li>
-                <li>Keeping the logic for handling paint, erase and rainbow mode inside the event handler made the
-                    code feel cluttered.
-                </li>
-            </ul>
+                </h3>
+                <ul class="challenges-list">
+                    <li>When the cursor reached the end of the grid, the grid container and the web page would turn red.
+                    </li>
+                    <li>Keeping the logic for handling paint, erase and rainbow mode inside the event handler made the
+                        code feel cluttered.
+                    </li>
+                </ul>
 
-            <h3>
-                What Helped
+                <h3>
+                    What Helped
 
-            </h3>
-            <p>The issue occurred because I was listening for the mouseover event on the parent container. Due to
-                event delegation, when the cursor hit the edge of the grid, the container itself became the
-                event.target,
-                causing the
-                background colour to be applied to the entire container and page.</p>
+                </h3>
+                <p>The issue occurred because I was listening for the mouseover event on the parent container. Due to
+                    event delegation, when the cursor hit the edge of the grid, the container itself became the
+                    event.target,
+                    causing the
+                    background colour to be applied to the entire container and page.</p>
 
-            <div>
-                <pre>
- <code >
+                <div class="example-code">
+                    <pre>
+ <code class="language-javascript" >
 //Before
                         
 containerElement.addEventListener("mouseup", () => {
@@ -76,8 +84,8 @@ e.target.style.backgroundColor = "red";
  });
 </code>
             </pre>
-                <pre>
-<code >
+                    <pre>
+<code class="language-javascript">
 //After
                         
 containerElement.addEventListener("mouseup", () => {
@@ -93,72 +101,77 @@ e.target.style.backgroundColor = "red";
 });
 </code> 
              </pre>
-            </div>
-
-            <p>To fix it, I added a check to make sure the event was only applied to the individual grid squares.
-                This meant that if the mouse moved over the container itself, nothing would happen.
-            </p>
-
-            <p>
-                And to clean up the code, I moved the logic for painting, erasing, and rainbow mode into a helper
-                function.
-            </p>
-
-            <h3>
-                What I Learned
-
-            </h3>
-            <p>This project taught me to pay
-                attention to where an event is being listened for, especially when working with mouse interactions
-                such as mousedown, mouseup, and mouseover. I also learned how using a helper function to handle
-                different tools in one place can help keep the code clean and easier to maintain as the project
-                grows.</p>
-
-            <h3>
-                Next Step
-
-            </h3>
-            <p>Originally, I built it around mouse events. My next step is to use Pointer Events so the project
-                works with different input
-                devices.
-
-            </p>
-            <section>
-                <p>From X</p>
-                <div>
-                    <div>N</div>
-                    <div>
-                        <strong>Nigesty</strong>
-                        <span> __@JustNigesty__ &middot; 2h </span>
-                    </div>
-                    <div> <a href="https://x.com/__JustNigesty__" target=_blank rel="noreferrer">Read on X ↗</a></div>
-
-
-
-                    <p>A quick update about the completed project.</p>
-
                 </div>
 
-            </section>
-        </article>
-        <aside>
-            <a href="#">In this log</a>
-            <nav>
-                <ul>
-                    <li>Problem</li>
-                    <li>Solution</li>
-                    <li>Lesson learned</li>
-                    <li>Next step</li>
-                </ul>
-            </nav>
-        </aside>
+                <p>To fix it, I added a check to make sure the event was only applied to the individual grid squares.
+                    This meant that if the mouse moved over the container itself, nothing would happen.
+                </p>
 
+                <p>
+                    And to clean up the code, I moved the logic for painting, erasing, and rainbow mode into a helper
+                    function.
+                </p>
+
+                <h3>
+                    What I Learned
+
+                </h3>
+                <p>This project taught me to pay
+                    attention to where an event is being listened for, especially when working with mouse interactions
+                    such as mousedown, mouseup, and mouseover. I also learned how using a helper function to handle
+                    different tools in one place can help keep the code clean and easier to maintain as the project
+                    grows.</p>
+
+                <h3>
+                    Next Step
+
+                </h3>
+                <p>Originally, I built it around mouse events. My next step is to use Pointer Events so the project
+                    works with different input
+                    devices.
+
+                </p>
+                <section class="social-update">
+                    <p class="label">From X</p>
+                    <div class="twitter-box">
+                        <div class="twitter-heading">
+                            <div class="avatar">N</div>
+                            <div>
+                                <strong>Nigesty</strong>
+                                <span class="span"> __@JustNigesty__ &middot; 2h </span>
+                            </div>
+                            <div class="twitter-link"> <a href="https://x.com/__JustNigesty__" target=_blank
+                                    rel="noreferrer">Read on X ↗</a>
+                            </div>
+
+                        </div>
+
+                        <p>A quick update about the completed project.</p>
+
+
+                    </div>
+
+                </section>
+            </article>
+            <aside>
+                <a href="#log-content" class="article-label log-overview">In this log</a>
+                <nav>
+                    <ul>
+                        <li>Problem</li>
+                        <li>Solution</li>
+                        <li>Lesson learned</li>
+                        <li>Next step</li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
 
     </main>
-    <footer>
+    <footer class="home-footer">
         <p>&copy; 2026 Nigesty Hagos</p>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 
 </html>

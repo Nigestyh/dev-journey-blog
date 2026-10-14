@@ -1,0 +1,178 @@
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 720px) 200px;
+  gap: 80px;
+  justify-content: center;
+}
+
+main.container {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 5rem 0 1.8rem;
+}
+
+aside a,
+aside nav ul {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin-block: 0;
+}
+
+aside nav ul li {
+  padding-top: 0.55rem;
+}
+
+.article-label {
+  font: 501 0.7rem "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  margin: 0 0 1rem;
+}
+.log-overview {
+  color: var(--contrast);
+  margin-bottom: 0.5rem;
+}
+article h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+header p.date {
+  font-size: 0.65rem;
+  margin-top: 0;
+}
+.post-date.meta-container {
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+main article p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+p.overview {
+  margin-top: 32px;
+}
+
+article h3 {
+  font-size: 1.6rem;
+  margin: 2.4rem 0 0.9rem;
+}
+
+ul.challenges-list {
+  margin-left: 1rem;
+  list-style: disc;
+  color: var(--muted);
+}
+.challenges-list li {
+  padding-block: 0.2rem;
+}
+
+aside {
+  position: sticky;
+  top: 110px;
+  border-left: 1px solid var(--line);
+  padding-left: 20px;
+  height: fit-content;
+}
+
+.interactive-link {
+  margin-block: 0.2rem;
+  color: #2b2b2a;
+  transition: all 300ms ease;
+  cursor: pointer;
+  font-size: 0.65rem;
+}
+.interactive-link:hover {
+  color: #7c7c78;
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+  text-decoration-color: rgba(181, 181, 181);
+}
+
+.example-code {
+  display: flex;
+  gap: 1rem;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: black !important;
+}
+pre[class*="language-"] code[class*="language-"],
+pre[class*="language-"],
+code[class*="language-"] {
+  text-shadow: none !important;
+  color: #c9c9c9;
+  font-size: 0.8rem !important;
+}
+pre[class*="language-"] {
+  border-radius: 0.7rem;
+  padding: 1.1rem 1.1rem 0 1.3rem !important;
+  box-shadow: var(--shadow);
+}
+.token.operator {
+  background: none !important;
+}
+.token.function,
+.token.class-name {
+  color: #c1ad62 !important;
+}
+.token.boolean {
+  color: #dd9aa5 !important;
+}
+
+section.social-update {
+  margin-top: 6rem;
+}
+
+.social-update > p {
+  font-weight: 501;
+}
+.twitter-box {
+  width: min(100%, 600px);
+  margin: 0 auto;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 18px 60px rgba(20, 20, 20, 0.08);
+}
+.twitter-box p {
+  padding-left: 10px;
+  color: var(--text);
+}
+.twitter-heading {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.avatar {
+  background-color: var(--text);
+  color: white;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+.twitter-link {
+  margin-left: auto;
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #fafafa;
+}
+.twitter-heading .span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.home-footer {
+  margin-top: 0;
+}
