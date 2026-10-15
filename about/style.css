@@ -85,3 +85,59 @@ section.about-content {
   text-underline-offset: 0.18rem;
   text-decoration-color: rgba(181, 181, 181);
 }
+
+@media (max-width: 51.8rem) {
+  /* 800px */
+  section.my-story {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .story-content {
+    max-width: 100%;
+  }
+  section p {
+    font-size: 1rem;
+  }
+
+  .page-title {
+    margin-bottom: 1.9rem;
+  }
+}
+
+@media (max-width: 46.8rem) {
+  /* 750px */
+  .page-title {
+    font-size: 2.7rem;
+    margin-bottom: 1.7rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  section p {
+    font-size: 0.95rem;
+    margin: 0.9rem 0 0;
+  }
+}
+
+@media (max-width: 35rem) {
+  /* 560px */
+  main.about-container {
+    padding: 0 1rem;
+  }
+  .hamburger-nav .menu-links li a {
+    font-size: 0.8rem;
+  }
+  ul.menu-links {
+    height: 29vh;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  .page-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  section p {
+    font-size: 0.85rem;
+  }
+}

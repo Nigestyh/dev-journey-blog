@@ -176,3 +176,153 @@ section.social-update {
 .home-footer {
   margin-top: 0;
 }
+
+nav.hamburger-nav {
+  display: none;
+}
+@media (max-width: 62.5rem) {
+  /* 1000px */
+
+  .article-layout {
+    gap: 40px;
+  }
+  article h2 {
+    font-size: clamp(2rem, 5vw, 3.1rem);
+  }
+}
+
+@media (max-width: 58.1rem) {
+  /* 929px */
+
+  .article-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  aside {
+    display: none;
+  }
+}
+@media (max-width: 50rem) {
+  /*800px*/
+  .desktop-menu {
+    display: none;
+  }
+  nav.hamburger-nav {
+    display: flex;
+    height: 31px;
+  }
+  .hamburger-button {
+    background: none;
+    border: none;
+    width: 35px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+    z-index: 110;
+  }
+  .hamburger-button:focus-visible {
+    outline: 2px solid #ff9f43;
+    outline-offset: 1px;
+  }
+  .hamburger-button span {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #e8903c;
+    border-radius: 4px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+  }
+  .hamburger-button span:nth-child(1) {
+    top: 25%;
+  }
+  .hamburger-button span:nth-child(3) {
+    top: 75%;
+  }
+
+  .menu-links {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.55rem;
+    background-color: rgba(245, 245, 243, 0.6);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 13px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    padding: 2rem 0 0 1rem;
+    height: 30vh;
+    width: 100%;
+    max-width: 120px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .menu-links.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .menu-links li a {
+    color: #595951;
+  }
+
+  .hamburger-button.open span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .hamburger-button.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-button.open span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .twitter-link {
+    font-size: 12px;
+  }
+}
+@media (max-width: 39rem) {
+  /*624px*/
+  .example-code {
+    flex-direction: column;
+    max-width: 500px;
+  }
+  header p.date,
+  .label,
+  .article-label {
+    font-size: 0.6rem;
+  }
+
+  .hamburger-nav .menu-links li a {
+    font-size: 0.8rem;
+  }
+  ul.menu-links {
+    height: 29vh;
+  }
+  main article p,
+  ul.challenges-list {
+    font-size: 0.95rem;
+  }
+  article h3 {
+    font-size: 1.4rem;
+  }
+
+  .twitter-heading .span {
+    font-size: 0.65rem;
+  }
+  .twitter-heading .avatar {
+    width: 41px;
+    height: 41px;
+  }
+  .twitter-heading strong {
+    font-size: 0.9rem;
+  }
+  .twitter-link {
+    font-size: 11px;
+    padding: 0.5rem 0.85rem;
+  }
+}
