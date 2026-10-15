@@ -125,6 +125,7 @@ pre[class*="language-"] {
 
 section.social-update {
   margin-top: 6rem;
+  display: none;
 }
 
 .social-update > p {
@@ -181,8 +182,6 @@ nav.hamburger-nav {
   display: none;
 }
 @media (max-width: 62.5rem) {
-  /* 1000px */
-
   .article-layout {
     gap: 40px;
   }
@@ -192,8 +191,6 @@ nav.hamburger-nav {
 }
 
 @media (max-width: 58.1rem) {
-  /* 929px */
-
   .article-layout {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -202,7 +199,6 @@ nav.hamburger-nav {
   }
 }
 @media (max-width: 50rem) {
-  /*800px*/
   .desktop-menu {
     display: none;
   }
@@ -286,7 +282,6 @@ nav.hamburger-nav {
   }
 }
 @media (max-width: 39rem) {
-  /*624px*/
   .example-code {
     flex-direction: column;
     max-width: 500px;

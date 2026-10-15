@@ -15,16 +15,18 @@
 <body>
     <header class="desktop-nav">
         <div><a href="../../index.html#hero" class="logo">Nigesty's Dev Journey</a> </div>
-        <nav class="desktop-menu">
+        <nav class="desktop-menu" aria-label="Main">
             <ul>
                 <li><a href="../../index.html#logs">Learning logs</a></li>
                 <li><a href="../../index.html#projects">Projects</a></li>
                 <li><a href="../../index.html#about">About</a></li>
             </ul>
         </nav>
-        <nav class="hamburger-nav">
-            <button class="hamburger-button">
-                <span></span><span></span><span></span>
+        <nav class="hamburger-nav" aria-label="Mobile">
+            <button class="hamburger-button" aria-expanded="false" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
             <ul class="menu-links">
                 <li><a href="../../index.html#logs">Learning logs</a></li>
@@ -40,15 +42,16 @@
                     <p class="article-label">Full learning log</p>
                     <h2>What I Learned Building an Etch-a-Sketch</h2>
                     <div class="post-date meta-container">
-                        <p class="date">Oct 14, 2026 · JavaScript · DOM Manipulation & Events</p>
+                        <p class="date">Oct 14, 2026 <span aria-hidden="true">·</span> JavaScript <span
+                                aria-hidden="true">·</span> DOM Manipulation & Events</p>
                         <span>
-                            |
+                            <span aria-hidden="true"> |</span>
                             <a href="https://github.com/Nigestyh/etch-a-sketch" class="interactive-link" target=_blank
-                                rel="noreferrer">View
+                                rel="noreferrer" aria-label="View Etch-a-Sketch code on Github">View
                                 code</a>
-                            ·
+                            <span aria-hidden="true">·</span>
                             <a href="https://nigestyh.github.io/etch-a-sketch/" class="interactive-link" target=_blank
-                                rel="noreferrer">Live
+                                rel="noreferrer" aria-label="View Etch-a-Sketch live demo">Live
                                 demo</a></span>
                     </div>
                 </header>
@@ -80,7 +83,7 @@
                     background colour to be applied to the entire container and page.</p>
 
                 <div class="example-code">
-                    <pre>
+                    <pre aria-label="JavaScript code before the fix" role="region">
  <code class="language-javascript" >
 //Before
                         
@@ -95,7 +98,7 @@ e.target.style.backgroundColor = "red";
  });
 </code>
             </pre>
-                    <pre>
+                    <pre aria-label="JavaScript code after the fix" role="region">
 <code class="language-javascript">
 //After
                         
@@ -142,17 +145,22 @@ e.target.style.backgroundColor = "red";
                     devices.
 
                 </p>
-                <section class="social-update">
-                    <p class="label">From X</p>
+                <section class="social-update" aria-label="Latest social media update from X">
+                    <p class="label"><span aria-hidden="true">From X</span></p>
                     <div class="twitter-box">
                         <div class="twitter-heading">
-                            <div class="avatar">N</div>
+                            <div class="avatar"><span aria-hidden="true">N</span></div>
                             <div>
                                 <strong>Nigesty</strong>
-                                <span class="span"> __@JustNigesty__ &middot; 2h </span>
+                                <span class="span"><span aria-label="Account handle: @JustNigesty"><span
+                                            aria-hidden="true">
+                                            __</span>@JustNigesty<span aria-hidden="true">__</span></span>
+                                    <span aria-hidden="true">&middot;</span>
+                                    <span aria-label="2 hours ago">2h</span> </span>
                             </div>
                             <div class="twitter-link"> <a href="https://x.com/__JustNigesty__" target=_blank
-                                    rel="noreferrer">Read on X ↗</a>
+                                    rel="noreferrer" aria-label="Read Nigesty's update on X">Read on X <span
+                                        aria-hidden="true">↗</span></a>
                             </div>
 
                         </div>
@@ -164,9 +172,9 @@ e.target.style.backgroundColor = "red";
 
                 </section>
             </article>
-            <aside>
+            <aside aria-label="Log overview">
                 <a href="#log-content" class="article-label log-overview">In this log</a>
-                <nav>
+                <nav aria-label="Table of contents">
                     <ul>
                         <li>Problem</li>
                         <li>Solution</li>
@@ -179,7 +187,7 @@ e.target.style.backgroundColor = "red";
 
     </main>
     <footer class="home-footer">
-        <p>&copy; 2026 Nigesty Hagos</p>
+        <p><span aria-hidden="true">&copy;</span> 2026 Nigesty Hagos</p>
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>

@@ -12,17 +12,20 @@
 <body>
     <header class="desktop-nav">
         <div><a href="#hero" class="logo">Nigesty's Dev Journey</a></div>
-        <nav class="desktop-menu">
+        <nav class="desktop-menu" aria-label="Main">
             <ul>
                 <li><a href="#logs">Learning logs</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
         </nav>
-        <nav class="hamburger-nav">
-            <button class="hamburger-button">
-                <span></span><span></span><span></span>
+        <nav class="hamburger-nav" aria-label="Mobile">
+            <button class="hamburger-button" aria-expanded="false" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+
             <ul class="menu-links">
                 <li><a href="#logs">Learning logs</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -33,18 +36,19 @@
     <main>
         <section id="hero" class="hero container">
             <div>
-                <p class="label"> Programming journey &middot; 2026</p>
+                <p class="label"> Programming journey <span aria-hidden="true">&middot; </span>2026</p>
                 <h1>Learning, building,<br> <span>figuring it out.</span></h1>
                 <p class="hero-text">Notes on what I've built, what broke, what I learned, and the practices that have
                     helped me become a better developer. </p>
                 <div class="hero-action">
-                    <a href="#logs" class="btn primary">Read the latest log</a>
-                    <a href="https://github.com/Nigestyh" class="btn secondary" target="_blank" rel="noreferrer">Github
-                        ↗</a>
+                    <a href="#logs" class="btn primary">Read the latest log <span aria-hidden="true">→</span></a>
+                    <a href="https://github.com/Nigestyh" class="btn secondary" target="_blank" rel="noreferrer"
+                        aria-label="GitHub profile (opens in a new tab)">Github
+                        <span aria-hidden="true">↗</span></a>
                 </div>
             </div>
-            <div class="terminal">
-                <div class="terminal-top">
+            <div class="terminal" aria-label="Terminal mock: Git learning log" role="region">
+                <div class="terminal-top" aria-hidden="true">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -72,15 +76,16 @@
                 <h2 class="home">Lessons along the way</h2>
             </div>
             <article class="featured-card">
-                <p class="post-date"><span>Oct 13, 2026</span> <span>&middot;</span><span> Javascript
-                    </span><span>&middot;</span><span> 3 min read</span></p>
+                <p class="post-date"><span>Oct 13, 2026</span> <span aria-hidden="true">&middot;</span><span> Javascript
+                    </span><span aria-hidden="true">&middot;</span><span> 3 min read</span></p>
                 <h3 class="article-title home">What I Learned Building an Etch-a-Sketch</h3>
                 <p>A digital sketchpad where users can draw on the grid, paint using different colours (including
                     rainbow colours),
                     erase, and reset the grid. My goal was to put DOM manipulation and
                     event handling concepts into practice.
                 </p>
-                <a href="./posts/learning-logs/index.html" class="text-link"> Read the full breakdown → </a>
+                <a href="./posts/learning-logs/index.html" class="text-link"> Read the full breakdown <span
+                        aria-hidden="true"> →</span> </a>
             </article>
             <div class="blog-list">
                 <article class="card">
@@ -103,40 +108,40 @@
             <h2 class="home">Things I've built</h2>
             <div class="project-list">
                 <article class="card">
-                    <div class="project-number">01</div>
+                    <div class="project-number"><span aria-hidden="true">01</span></div>
                     <h4>Project title</h4>
                     <p>Short project description goes here.</p>
                     <div class="stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
                             class="tag">JavaScript</span></div>
-                    <span class="text-link placeholder">Read project notes→</span>
+                    <span class="text-link placeholder">Read project notes <span aria-hidden="true">→</span></span>
                 </article>
                 <article class="card">
-                    <div class="project-number">02</div>
+                    <div class="project-number"> <span aria-hidden="true">02</span></div>
                     <h4>Project title</h4>
                     <p>Short project description goes here</p>
                     <div class="stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
                             class="tag">JavaScript</span></div>
-                    <span class="text-link placeholder">See it live →</span>
+                    <span class="text-link placeholder">See it live <span aria-hidden="true">→</span></span>
                 </article>
 
                 <article class="card">
-                    <div class="project-number">03</div>
+                    <div class="project-number"><span aria-hidden="true">03</span></div>
                     <h4>Project title</h4>
                     <p>Short project description goes here</p>
                     <div class="stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
                             class="tag">JavaScript</span></div>
-                    <span class="text-link placeholder">View on GitHub →</span>
+                    <span class="text-link placeholder">View on GitHub <span aria-hidden="true">→</span></span>
                 </article>
             </div>
         </section>
         <section id="about" class="section container">
             <p class="label about-me">A bit about me</p>
             <h2 class="h2 home">Who I am, why this page exists,<br> and more.</h2>
-            <a href="./about/index.html" class="btn secondary">More about me → </a>
+            <a href="./about/index.html" class="btn secondary">More about me <span aria-hidden="true">→ </span></a>
         </section>
     </main>
     <footer class="home-footer container">
-        <p>&copy; 2026 Nigesty Hagos</p>
+        <p><span aria-hidden="true">&copy;</span> 2026 Nigesty Hagos</p>
     </footer>
 </body>
 
